@@ -7,4 +7,10 @@ public function getAsiakas() {
 	return $this->db->get()->result_array();
 
 }
+
+public function addAsiakas($lisaa_data) {
+	$this->db->insert('asiakas', $lisaa_data);
+	return $this->db->affected_rows();
+}
+
 }
